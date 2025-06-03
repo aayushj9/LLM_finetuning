@@ -9,6 +9,11 @@ This project fine-tunes the **`google/flan-t5-small`** language model on a custo
 The goal is to teach a pretrained sequence-to-sequence model to understand instructions and user inputs related to airline services and generate relevant, accurate responses.
 
 ---
+## 📌 Google Colab Notebook Link
+
+[Click here to open notebook](https://colab.research.google.com/drive/1vSbJOiobMFaFeFkhbr1Dav77HKeD9qOi#scrollTo=TdaqPq0Y2JWy)
+
+---
 
 ## Dataset
 
