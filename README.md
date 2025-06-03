@@ -12,6 +12,7 @@ The goal is to teach a pretrained sequence-to-sequence model to understand instr
 ## 📌 Google Colab Notebook Link
 
 [Click here to open notebook](https://colab.research.google.com/drive/1vSbJOiobMFaFeFkhbr1Dav77HKeD9qOi#scrollTo=TdaqPq0Y2JWy)
+Note : While running the code, it is needed to add wandb.ai key (Please create one if not available) 
 
 ---
 
