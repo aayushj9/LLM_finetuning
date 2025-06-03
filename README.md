@@ -83,13 +83,72 @@ This setup can serve as a foundation for developing specialized conversational a
 
 ---
 
-## Next Steps
+## Challenges & Reasons for Low Accuracy (~10%)
 
-- Use a larger and more diverse dataset to improve the model’s understanding and response quality.
-- Explore more sophisticated evaluation metrics beyond simple keyword matching.
-- Deploy the fine-tuned model in a chatbot framework or API service for real-world use.
+1. **Small Dataset Size**  
+ The dataset contains only about 30 examples, which is insufficient for effective fine-tuning of even a small transformer model.
+
+2. **Limited Training Epochs and Batch Size**  
+ Only 5 epochs with a batch size of 2 might not allow the model to converge well or generalize.
+
+3. **Simple Keyword Matching for Evaluation**  
+ The accuracy calculation relies on a simple keyword match, which can underestimate the quality if the model produces correct but paraphrased or semantically similar responses.
+
+4. **Model Size Constraints**  
+ `google/flan-t5-small` is a relatively small model with limited capacity, restricting its ability to learn complex language patterns and domain knowledge from limited data.
+
+5. **No Data Augmentation or Diversity**  
+ The training examples, while varied, are limited in number and might not cover enough variations of queries, leading to poor generalization.
+
+6. **Overfitting Risk**  
+ With such a small dataset, the model can easily overfit on training data without truly learning to generalize responses.
+
+7. **Lack of Validation Set**  
+ There’s no separate validation or test set to tune hyperparameters or prevent overfitting, reducing training effectiveness.
+
+8. **Truncation and Padding Effects**  
+ Fixed max length tokenization can truncate important information or add unnecessary padding, affecting learning quality.
+
+9. **Absence of Advanced Fine-Tuning Techniques**  
+ Techniques like learning rate schedulers, early stopping, or data mixing were not applied, which can improve performance.
+
+10. **Simplistic Input Formatting**  
+  Although instructions and inputs are combined, the model might benefit from more contextual prompts or better formatting for clarity.
+
+11. **No Use of Preprocessing or Cleaning of Input Text**  
+  Variations in user input (spelling, grammar, phrasing) are not addressed, potentially confusing the model.
+
+12. **Limited Hyperparameter Tuning**  
+  No experimentation with learning rate, optimizer choice, or other parameters to optimize fine-tuning.
+
+13. **Evaluation on Training Data Only**  
+  Evaluating on the same data used for training does not provide a robust measure of generalization.
+
+14. **Inherent Model Biases and Pretraining Domain**  
+  The base Flan-T5 model is trained on general language tasks and might not have sufficient prior knowledge of airline-specific jargon.
+
+15. **Simple Labeling Strategy**  
+  Using direct output text as labels without additional conditioning or token alignment might limit model’s understanding of the task.
 
 ---
 
+## Summary
 
-  
+Fine-tuning a small model like `google/flan-t5-small` on a limited dataset with minimal hyperparameter tuning and evaluation can result in low accuracy. To improve, one should consider:
+
+- Increasing dataset size and diversity.
+- Using more advanced fine-tuning strategies.
+- Employing better evaluation metrics.
+- Experimenting with larger or domain-adapted models.
+
+---
+
+## Next Steps
+
+- Expand dataset with more examples and variations.
+- Implement validation and test splits.
+- Explore larger or more domain-specific pretrained models.
+- Apply data augmentation and more sophisticated training schedules.
+- Use semantic similarity metrics or human evaluation for better accuracy assessment.
+
+---
