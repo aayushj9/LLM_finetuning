@@ -38,6 +38,6 @@ Follow these steps to run fine-tuning locally or on Google Colab.
 
 ### 📌 Google Colab Notebook Link
 
-[Open the working notebook here]([YOUR_COLAB_NOTEBOOK_LINK_HERE](https://colab.research.google.com/drive/1vSbJOiobMFaFeFkhbr1Dav77HKeD9qOi#scrollTo=TdaqPq0Y2JWy))
+[Open the working notebook here](https://colab.research.google.com/drive/1vSbJOiobMFaFeFkhbr1Dav77HKeD9qOi#scrollTo=TdaqPq0Y2JWy)
 
 ---
