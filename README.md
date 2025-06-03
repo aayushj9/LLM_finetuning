@@ -70,18 +70,6 @@ This dataset is formatted to cover a wide range of airline-related scenarios, in
 
 ---
 
-## Summary
-
-This fine-tuning process adapts a general-purpose language model to a specific domain (airline policies and FAQs), enabling it to generate precise and context-aware answers to user queries. The approach combines:
-
-- Instruction-based prompting for clear input formatting.
-- Tokenization for model compatibility.
-- Supervised training to teach the model expected responses.
-- Post-training evaluation to assess model quality.
-
-This setup can serve as a foundation for developing specialized conversational agents in various domains by providing relevant training data and following similar fine-tuning steps.
-
----
 
 ## Challenges & Reasons for Low Accuracy (~10%)
 
