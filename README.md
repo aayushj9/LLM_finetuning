@@ -1,7 +1,5 @@
 # LLM finetuning
 
-# Airline_Chatbot_FineTuning
-
 A Python-based fine-tuning project for an airline customer support chatbot using open-source Large Language Models (LLMs) with Hugging Face PEFT and LoRA techniques.
 
 ---
