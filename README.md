@@ -1,43 +1,30 @@
-# LLM finetuning
+# Fine-Tuning with Google Flan-T5
 
-A Python-based fine-tuning project for an airline customer support chatbot using open-source Large Language Models (LLMs) with Hugging Face PEFT and LoRA techniques.
-
----
-
-# 🛫 AI-Powered Airline Chatbot with Fine-Tuned LLM
-
-This project fine-tunes a powerful open-source LLM on airline-specific customer queries to build a chatbot capable of handling tasks like booking flights, checking flight status, baggage policies, refunds, and more.
+This project fine-tunes the **`google/flan-t5-small`** language model on a custom airline policy and FAQ dataset to build a chatbot capable of answering various airline-related queries such as flight booking, status, baggage policies, cancellations, and more.
 
 ---
 
-## 📌 Features
+## Overview
 
-- Fine-tune an open-source LLM model (`mistralai/Mistral-7B-Instruct-v0.1` or similar)
-- Use PEFT (LoRA) for parameter-efficient, low-resource fine-tuning
-- Custom dataset with 30+ real-world airline customer queries
-- Evaluate fine-tuned model accuracy on test queries
-- Easy-to-understand example notebook for training and inference
-- Ready for deployment as a chatbot backend
+The goal is to teach a pretrained sequence-to-sequence model to understand instructions and user inputs related to airline services and generate relevant, accurate responses.
 
 ---
 
-### ✅ Prerequisites
+## Dataset
 
-- Python 3.8+
-- GPU with CUDA support (for faster fine-tuning; CPU also works but slower)
-- Hugging Face `transformers`, `datasets`, `peft`, `accelerate`, `trl` libraries
-- Internet connection for downloading pre-trained models
+The dataset consists of multiple examples, where each example contains:
 
----
+- **Instruction**: A description of the user’s intent (e.g., "Book a flight").
+- **Input**: The actual user query (e.g., "I want to book a flight from Delhi to Dubai on 15 July").
+- **Output**: The expected chatbot response (e.g., "Sure! Booking a flight from Delhi to Dubai on 15 July. Please confirm your time preference.").
 
-## 🚀 Getting Started
-
-Follow these steps to run fine-tuning locally or on Google Colab.
+This dataset is formatted to cover a wide range of airline-related scenarios, including flight status, baggage rules, cancellations, seat preferences, refunds, and more.
 
 ---
 
-### 📌 Google Colab Notebook Link
+## Step-by-Step Process
 
-[Open the working notebook here](https://colab.research.google.com/drive/1vSbJOiobMFaFeFkhbr1Dav77HKeD9qOi#scrollTo=TdaqPq0Y2JWy)
+### 1. Data Preparation and Preprocessing
 
----
+- The instruction and user input are combined into a single input text prompt in the format:
+  
